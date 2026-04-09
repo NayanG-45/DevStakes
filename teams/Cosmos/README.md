@@ -29,7 +29,7 @@ Tech beginners often struggle to build consistent daily study habits because tra
 - **Advanced UI/UX:** The "Smart Flashcards" view utilizes deep CSS mappings (`transform-style: preserve-3d` coupled with `rotateY`) orchestrated heavily via `framer-motion` layout animations to produce a premium, engaging tactile feel. The layout is managed efficiently via a strictly responsive top-level `Navbar.jsx`.
 
 ## How to Run Locally
-1. Clone the repository: `git clone <your-repo-url>`
+1. Clone the repository: `git clone https://github.com/NayanG-45/DevStakes.git`
 2. Navigate to the project directory: `cd Cosmos`
 3. Install dependencies: `npm install`
 4. Set up your AI: In `src/components/AIGenerator.jsx`, ensure the `GROQ_API_KEY` is populated.
@@ -37,7 +37,7 @@ Tech beginners often struggle to build consistent daily study habits because tra
 6. Open your browser and visit: `http://localhost:5173/`
 
 ## Live Demo
-Link to deployed app (Vercel / Netlify / etc.)
+https://dev-stakes-m2gzbxqkz-guddan8795-5084s-projects.vercel.app
 
 ## Screenshots / Demo
-(Include a demo video or screenshots showcasing your app's features)
+Youtube Demo Video Link => https://youtu.be/D1Mp_ZRlJ9g
