@@ -1,4 +1,4 @@
-# Project Name
+# StudyBro
 
 ## Team Name
 Cosmos
@@ -11,20 +11,30 @@ Cosmos
 - Amishka Sisodiya (GitHub: amishkasisodiya57 ) 
 
 ## Idea Chosen
-(Name of the idea — e.g., "Smart Expense Splitter" or "Custom: <your idea name>")
+StudyBro — Interactive AI-Powered LMS
 
 ## Problem Statement
-Brief description of the problem you are solving.
+Tech beginners often struggle to build consistent daily study habits because traditional learning materials are static, tedious, and lack immediate feedback. There is a critical need for an engaging, gamified platform that transforms raw notes into active recall sessions seamlessly without requiring users to manually format their study materials.
 
 ## Tech Stack
-- React
-- (any other libraries/frameworks/tools used)
+- React (Vite)
+- Tailwind CSS (Premium Dark Mode & Glassmorphism styling)
+- Framer Motion (Hardware-accelerated 3D animations and transitions)
+- Lucide React (Clean iconography)
+- Groq AI API (`llama-3.1-8b-instant` for rapid JSON generation)
 
 ## Implementation Details
-Describe your approach — architecture decisions, key features, algorithms used, state management strategy, etc.
+- **Architecture & State Management:** The application acts as a standalone SPA that fundamentally relies on a customized `useLocalStorage` hook to simulate a persistent backend. This guarantees users retain active login streaks, past quiz scores, and AI-generated study data strictly within their browser session limits, creating a fast friction-less experience.
+- **Dynamic AI Generation:** The `AIGenerator` component intercepts user-uploaded `.txt` files (via standard HTML5 FileReader APIs) or pasted notes, and queries Groq's high-speed inference engine using standard zero-shot prompt engineering. The returned JSON matrix is parsed securely and prepended into the app's global state to instantly spawn custom "Daily 10 Quizzes" and "Smart Flashcards".
+- **Advanced UI/UX:** The "Smart Flashcards" view utilizes deep CSS mappings (`transform-style: preserve-3d` coupled with `rotateY`) orchestrated heavily via `framer-motion` layout animations to produce a premium, engaging tactile feel. The layout is managed efficiently via a strictly responsive top-level `Navbar.jsx`.
 
 ## How to Run Locally
-Steps to clone and run the project on a local machine.
+1. Clone the repository: `git clone <your-repo-url>`
+2. Navigate to the project directory: `cd Cosmos`
+3. Install dependencies: `npm install`
+4. Set up your AI: In `src/components/AIGenerator.jsx`, ensure the `GROQ_API_KEY` is populated.
+5. Start the local development server: `npm run dev`
+6. Open your browser and visit: `http://localhost:5173/`
 
 ## Live Demo
 Link to deployed app (Vercel / Netlify / etc.)
